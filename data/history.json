@@ -1,0 +1,47 @@
+[
+  {
+    "meal_name": "Chicken/rice/veggies",
+    "calories": 700,
+    "energy": 92,
+    "proteins": 74,
+    "fat": 2,
+    "id": 1,
+    "date": "2023-05-29T09:13:48+02:00"
+  },
+  {
+    "meal_name": "Meal name history 2",
+    "calories": 1000,
+    "energy": 500,
+    "proteins": 300,
+    "fat": 200,
+    "id": 2,
+    "date": "2023-05-29T09:13:48+02:00"
+  },
+  {
+    "meal_name": "Meal name history 3",
+    "calories": 5135,
+    "energy": 22,
+    "proteins": 12,
+    "fat": 23,
+    "id": 3,
+    "date": "2023-05-25T09:13:48+02:00"
+  },
+  {
+    "meal_name": "Meal name history 4",
+    "calories": 1000,
+    "energy": 757,
+    "proteins": 122,
+    "fat": 242,
+    "id": 4,
+    "date": "2023-05-11T09:13:48+02:00"
+  },
+  {
+    "meal_name": "Meal name history 5",
+    "calories": 1000,
+    "energy": 500,
+    "proteins": 300,
+    "fat": 200,
+    "id": 5,
+    "date": "2023-05-30T09:13:48+02:00"
+  }
+]
