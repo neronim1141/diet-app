@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button";
+import { AddToMenuDialog } from "@/components/dialogs/addToMenu";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import menu from "@/data/menu.json";
 
@@ -17,7 +17,10 @@ export default function Menu() {
             <div>Total lipid (fat): {e.fat}</div>
           </CardContent>
         </Card>
-      ))}
+      ))}{" "}
+      <div className="absolute bottom-0 right-0 m-12">
+        <AddToMenuDialog />
+      </div>
     </div>
   );
 }

@@ -34,20 +34,32 @@ const MacroInput = ({ label, unit, ...props }: MacroInputProps) => {
     </div>
   );
 };
+
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+
 export default function Home() {
   return (
-    <div className="p-2 flex justify-center gap-4 items-center h-full flex-grow ">
-      <Card className="flex flex-col gap-4  mx-auto w-[275px]">
-        <CardHeader>
-          <CardTitle className="self-center">Just calories</CardTitle>
-        </CardHeader>
-        <CardContent className="space-y-4 flex flex-col">
-          <MacroInput label="Calories" unit="Kcal" />
-          <MacroInput label="Energy" unit="g" />
-          <MacroInput label="Protein" unit="g" />
-          <MacroInput label="Total lipid" unit="g" />
-          <div className="flex flex-col gap-4 items-center">
-            <Label className="mb-2">Menu</Label>
+    <div className="p-2 flex sm:w-3/4 gap-4 self-center h-full flex-grow ">
+      <Accordion type="single" collapsible className="w-full">
+        <AccordionItem value="item-1">
+          <AccordionTrigger>Just calories</AccordionTrigger>
+          <AccordionContent className="m-2">
+            <MacroInput label="Name" unit="name" />
+            <MacroInput label="Calories" unit="kcal" />
+            <MacroInput label="Energy" unit="g" />
+            <MacroInput label="Protein" unit="g" />
+            <MacroInput label="Total lipid" unit="g" />
+            <Button className="w-full">add</Button>
+          </AccordionContent>
+        </AccordionItem>
+        <AccordionItem value="item-2">
+          <AccordionTrigger>From menu</AccordionTrigger>
+          <AccordionContent>
             <Select>
               <SelectTrigger>
                 <SelectValue placeholder={menu[0].meal_name} />
@@ -60,10 +72,38 @@ export default function Home() {
                 ))}
               </SelectContent>
             </Select>
-          </div>
-          <Button>add</Button>
-        </CardContent>
-      </Card>
+            <MacroInput label="Calories" unit="kcal" />
+            <MacroInput label="Energy" unit="g" />
+            <MacroInput label="Protein" unit="g" />
+            <MacroInput label="Total lipid" unit="g" />
+            <Button className="w-full">add</Button>
+          </AccordionContent>
+        </AccordionItem>
+        <AccordionItem value="item-3">
+          <AccordionTrigger>From history</AccordionTrigger>
+          <AccordionContent>
+            <Select>
+              <SelectTrigger>
+                <SelectValue placeholder={menu[0].meal_name} />
+              </SelectTrigger>
+              <SelectContent>
+                {history.map((m) => (
+                  <SelectItem value={m.meal_name} key={m.id}>
+                    {m.meal_name}
+                  </SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
+            <MacroInput label="Calories" unit="kcal" />
+            <MacroInput label="Energy" unit="g" />
+            <MacroInput label="Protein" unit="g" />
+            <MacroInput label="Total lipid" unit="g" />
+            <Button className="w-full">add</Button>
+          </AccordionContent>
+        </AccordionItem>
+      </Accordion>
     </div>
   );
 }
+
+// change todays date Date Picker
